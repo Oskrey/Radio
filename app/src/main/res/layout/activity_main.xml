@@ -10,6 +10,7 @@
         android:id="@+id/figures"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:baselineAligned="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,17 +37,33 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="167dp"
-        android:layout_height="89dp"
-        android:text="TextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/choose_hint"
+        android:textAlignment="center"
+        android:textDirection="firstStrongRtl"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12" />
+        app:layout_constraintVertical_bias="0.12"
+        tools:layout_editor_absoluteX="202dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonChoose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="output"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/figures"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
@@ -54,7 +71,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/figures"
-        app:layout_constraintVertical_bias="0.493" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonChoose"
+        app:layout_constraintVertical_bias="0.274" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

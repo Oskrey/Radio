@@ -3,4 +3,7 @@
     <string name="circle_name">Circle</string>
     <string name="square_name">Square</string>
     <string name="triangle_name">Triangle</string>
+    <string name="choose_hint">Choose figure</string>
+    <string name="choose_button">Choose figure</string>
+    <string name="clear_button">Clear</string>
 </resources>

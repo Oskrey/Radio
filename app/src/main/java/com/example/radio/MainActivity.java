@@ -25,7 +25,15 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void output(Group group){
+    public void output(View view){
+        TextView textView = findViewById(R.id.textView);
+        textView.setText(x);
+    }
+
+    public void clear(View view){
+        RadioGroup rg = findViewById(R.id.figures);
+        rg.clearCheck();
+
         TextView textView = findViewById(R.id.textView);
         textView.setText(x);
     }

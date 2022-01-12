@@ -4,4 +4,7 @@
     <string name="circle_name">Круг</string>
     <string name="square_name">Квадрат</string>
     <string name="triangle_name">Треугольник</string>
+    <string name="choose_hint">Выберите фигуру</string>
+    <string name="clear_button">Отчистить</string>
+    <string name="choose_button">Выбрать фигуру</string>
 </resources>
