@@ -17,23 +17,33 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         RadioGroup rg = findViewById(R.id.figures);
+        Button clear = findViewById(R.id.buttonClear);
+        clear.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                rg.clearCheck();
+                TextView textView = findViewById(R.id.textView);
+                textView.setText("");
+            }
+        });
         rg.setOnCheckedChangeListener((group, checkedId) -> {
-            RadioButton radioButton = findViewById(checkedId);
-            x = (String) radioButton.getText();
+            if (rg.getCheckedRadioButtonId() == -1)
+            {
+                // no radio buttons are checked
+            }
+            else
+            {
+                RadioButton radioButton = findViewById(checkedId);
+                x = (String) radioButton.getText();
+            }
+
         });
     }
 
     public void output(View view){
-        TextView textView = findViewById(R.id.textView);
-        textView.setText(x);
-    }
-
-    public void clear(View view){
-        RadioGroup rg = findViewById(R.id.figures);
-        rg.clearCheck();
-
         TextView textView = findViewById(R.id.textView);
         textView.setText(x);
     }
