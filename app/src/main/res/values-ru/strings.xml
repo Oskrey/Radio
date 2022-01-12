@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Radio</string>
+    <string name="circle_name">Круг</string>
+    <string name="square_name">Квадрат</string>
+    <string name="triangle_name">Треугольник</string>
+</resources>
