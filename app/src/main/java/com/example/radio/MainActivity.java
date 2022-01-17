@@ -1,15 +1,13 @@
 package com.example.radio;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import java.security.acl.Group;
+import androidx.appcompat.app.AppCompatActivity;
+
 
 public class MainActivity extends AppCompatActivity {
     String x;
@@ -19,15 +17,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         RadioGroup rg = findViewById(R.id.figures);
         Button clear = findViewById(R.id.buttonClear);
-        clear.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                rg.clearCheck();
-                TextView textView = findViewById(R.id.textView);
-                textView.setText("");
-            }
+        Button output = findViewById(R.id.buttonChoose);
+        output.setOnClickListener(view -> {
+            TextView textView = findViewById(R.id.textView);
+            textView.setText(x);
+        });
+        clear.setOnClickListener(v -> {
+            rg.clearCheck();
+            TextView textView = findViewById(R.id.textView);
+            textView.setText("");
         });
         rg.setOnCheckedChangeListener((group, checkedId) -> {
             if (rg.getCheckedRadioButtonId() == -1)
@@ -43,8 +41,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void output(View view){
-        TextView textView = findViewById(R.id.textView);
-        textView.setText(x);
-    }
 }
