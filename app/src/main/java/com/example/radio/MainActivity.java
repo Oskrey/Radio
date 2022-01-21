@@ -18,15 +18,19 @@ public class MainActivity extends AppCompatActivity {
         RadioGroup rg = findViewById(R.id.figures);
         Button clear = findViewById(R.id.buttonClear);
         Button output = findViewById(R.id.buttonChoose);
+
         output.setOnClickListener(view -> {
             TextView textView = findViewById(R.id.textView);
             textView.setText(x);
         });
+
+
         clear.setOnClickListener(v -> {
             rg.clearCheck();
             TextView textView = findViewById(R.id.textView);
             textView.setText("");
         });
+
         rg.setOnCheckedChangeListener((group, checkedId) -> {
             if (rg.getCheckedRadioButtonId() == -1)
             {
